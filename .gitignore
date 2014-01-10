@@ -1,0 +1,17 @@
+bin/
+target/
+target-eclipse/
+.classpath
+.project
+.settings/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+.idea/
+rebel.xml
+derby.log
+.metadata/
+pom.xml.versionsBackup
+deploy.sh
+.externalToolBuilders/
