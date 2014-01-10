@@ -6,6 +6,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>backend</module>
+        <module>frontend</module>
     </modules>
     <groupId>com.base2.kagura.custom</groupId>
     <artifactId>kagura-custom-assembly</artifactId>

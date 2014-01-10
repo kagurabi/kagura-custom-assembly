@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>kagura-custom-assembly</artifactId>
+        <groupId>com.base2.kagura.custom</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.base2.kagura.custom</groupId>
+    <artifactId>kagura-custom-reports-frontend</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <properties>
+        <jetty-server.version>8.1.12.v20130726</jetty-server.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.base2.kagura.example</groupId>
+            <artifactId>kagura-example-javascript</artifactId>
+            <version>${kagura.version}</version>
+            <scope>compile</scope>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>javascript</finalName>
+        <plugins>
+            <plugin>
+                <!-- This plugin is needed for the servlet example -->
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-server.version}</version>
+                <configuration>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>jetty.port</name>
+                            <value>8000</value>
+                        </systemProperty>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution><goals><goal>java</goal></goals></execution>
+                </executions>
+                <configuration>
+                </configuration>
+            </plugin>
+            <!-- A cheap and dirty method of importing the war without having to duplicate the files. -->
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <overlays>
+                        <overlay>
+                            <groupId>com.base2.kagura.example</groupId>
+                            <artifactId>kagura-example-javascript</artifactId>
+                            <version>${kagura.version}</version>
+                            <type>war</type>
+                            <includes>
+                                <include>WEB-INF/**/*</include>
+                                <include>webapp/**/*</include>
+                            </includes>
+                        </overlay>
+                    </overlays>
+                </configuration>
+
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+</project>
