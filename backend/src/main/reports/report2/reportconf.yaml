@@ -1,0 +1,4 @@
+type: "Fake"
+extraOptions:
+  reportName: "Report 2"
+  directory: "Folder 1"
