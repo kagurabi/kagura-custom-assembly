@@ -59,23 +59,25 @@
             <!-- A cheap and dirty method of importing the war without having to duplicate the files. -->
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
                 <configuration>
                     <overlays>
                         <overlay>
                             <groupId>com.base2.kagura.example</groupId>
                             <artifactId>kagura-example-javascript</artifactId>
-                            <version>${kagura.version}</version>
                             <type>war</type>
                             <includes>
                                 <include>WEB-INF/**/*</include>
-                                <include>webapp/**/*</include>
+                                <include>lib/**/*</include>
+                                <include>*.js</include>
+                                <include>*.jsp</include>
+                                <include>*.jpg</include>
+                                <include>*.png</include>
                             </includes>
                         </overlay>
                     </overlays>
                 </configuration>
-
             </plugin>
-
         </plugins>
     </build>
 
