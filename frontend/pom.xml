@@ -6,11 +6,11 @@
 
     <parent>
         <artifactId>kagura-custom-assembly</artifactId>
-        <groupId>com.base2.kagura.custom</groupId>
+        <groupId>com.kagurabi.custom</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.base2.kagura.custom</groupId>
+    <groupId>com.kagurabi.custom</groupId>
     <artifactId>kagura-custom-reports-frontend</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
@@ -21,7 +21,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.base2.kagura.example</groupId>
+            <groupId>com.kagurabi.example</groupId>
             <artifactId>kagura-example-javascript</artifactId>
             <version>${kagura.version}</version>
             <scope>compile</scope>
@@ -63,7 +63,7 @@
                 <configuration>
                     <overlays>
                         <overlay>
-                            <groupId>com.base2.kagura.example</groupId>
+                            <groupId>com.kagurabi.example</groupId>
                             <artifactId>kagura-example-javascript</artifactId>
                             <type>war</type>
                             <includes>
