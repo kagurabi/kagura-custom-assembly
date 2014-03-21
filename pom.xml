@@ -30,19 +30,4 @@
         <karaf.version>2.3.1</karaf.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>Base2-release</id>
-            <name>Base2 Kagura</name>
-            <url>http://maven.base2services.com/nexus/content/repositories/releases</url>
-            <releases><enabled>true</enabled></releases>
-        </repository>
-        <repository>
-            <id>Base2-snapshot</id>
-            <name>Base2 Kagura snapshots</name>
-            <url>http://maven.base2services.com/nexus/content/repositories/snapshot</url>
-            <snapshots><enabled>true</enabled></snapshots>
-        </repository>
-    </repositories>
-
 </project>
