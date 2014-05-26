@@ -35,6 +35,7 @@
                 <exclude>bin/**</exclude>
                 <exclude>karaf-manual*.*</exclude>
                 <exclude>etc/com.base2.kagura.services.camel.*</exclude>
+                <exclude>etc/com.kagurabi.services.camel.*</exclude>
             </excludes>
         </fileSet>
 
